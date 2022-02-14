@@ -120,3 +120,9 @@ Feb 14 04:04:41 server splunk[32885]: Look for answers here: http://docs.splunk.
 Feb 14 04:04:41 server splunk[32885]: The Splunk web interface is at http://server:8000
 Feb 14 04:04:41 server systemd[1]: Started LSB: Start splunk.
 ```
+
+sekarang silakan teman-teman akses ip server splunk, ketikkan `address:8000` lalu masukkan username dan password tadi.
+
+![Screenshot from 2022-02-14 11-16-10](https://user-images.githubusercontent.com/92193431/153799246-d3d38ed9-e4bb-468b-b84e-5b935e29b091.png)
+
+![Screenshot from 2022-02-14 11-15-35](https://user-images.githubusercontent.com/92193431/153799309-b7738373-1504-4220-8084-5b827c0e3829.png)
