@@ -94,3 +94,29 @@ check status
 ```bash
 systemctl status splunk
 ```
+```
+● splunk.service - LSB: Start splunk
+     Loaded: loaded (/etc/init.d/splunk; generated)
+     Active: active (running) since Mon 2022-02-14 04:04:41 UTC; 8min ago
+       Docs: man:systemd-sysv-generator(8)
+    Process: 32880 ExecStart=/etc/init.d/splunk start (code=exited, status=0/SUCCESS)
+      Tasks: 217 (limit: 2273)
+     Memory: 889.4M
+     CGroup: /system.slice/splunk.service
+             ├─33058 splunkd -p 8089 start
+             ├─33059 [splunkd pid=33058] splunkd -p 8089 start [process-runner]
+             ├─33386 mongod --dbpath=/opt/splunk/var/lib/splunk/kvstore/mongo --storageEngine=mmapv1 --port=8191 --timeStampFormat=iso8601-utc --smallfiles --oplogSize=>
+             ├─33486 /opt/splunk/bin/python3.7 -O /opt/splunk/lib/python3.7/site-packages/splunk/appserver/mrsparkle/root.py --proxied=127.0.0.1,8065,8000
+             └─33500 /opt/splunk/bin/splunkd instrument-resource-usage -p 8089 --with-kvstore
+
+Feb 14 04:04:13 server splunk[32885]:         All installed files intact.
+Feb 14 04:04:13 server splunk[32885]:         Done
+Feb 14 04:04:13 server splunk[32885]: All preliminary checks passed.
+Feb 14 04:04:13 server splunk[32885]: Starting splunk server daemon (splunkd)...
+Feb 14 04:04:13 server splunk[32885]: Done
+Feb 14 04:04:41 server splunk[32885]: Waiting for web server at http://127.0.0.1:8000 to be available....................... Done
+Feb 14 04:04:41 server splunk[32885]: If you get stuck, we're here to help.
+Feb 14 04:04:41 server splunk[32885]: Look for answers here: http://docs.splunk.com
+Feb 14 04:04:41 server splunk[32885]: The Splunk web interface is at http://server:8000
+Feb 14 04:04:41 server systemd[1]: Started LSB: Start splunk.
+```
